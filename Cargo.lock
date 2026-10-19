@@ -414,9 +414,13 @@ checksum = "a4ae5f15dda3c708c0ade84bfee31ccab44a3da4f88015ed22f63732abe300c8"
 name = "delego-cross-contract-tests"
 version = "0.0.1"
 dependencies = [
+ "delego-delegation-registry",
  "delego-escrow",
+ "delego-interfaces",
+ "delego-marketplace",
  "delego-permissions",
  "delego-reputation",
+ "ed25519-dalek",
  "soroban-sdk",
 ]
 
@@ -429,6 +433,15 @@ dependencies = [
 
 [[package]]
 name = "delego-escrow"
+version = "0.0.1"
+dependencies = [
+ "delego-interfaces",
+ "ed25519-dalek",
+ "soroban-sdk",
+]
+
+[[package]]
+name = "delego-interfaces"
 version = "0.0.1"
 dependencies = [
  "soroban-sdk",
@@ -446,6 +459,7 @@ dependencies = [
 name = "delego-permissions"
 version = "0.0.1"
 dependencies = [
+ "arbitrary",
  "ed25519-dalek",
  "soroban-sdk",
 ]
